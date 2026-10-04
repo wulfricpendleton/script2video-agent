@@ -1,0 +1,14 @@
+version: 1
+model: seedance-2.5
+steps:
+  - id: plan
+    output: storyboard.json
+  - id: submit
+    input: storyboard.json
+    output: request_ids.json
+  - id: poll
+    input: request_ids.json
+    output: media/
+  - id: review
+    input: media/
+    output: review.json
